@@ -1,0 +1,129 @@
+/* Master styles */
+body {
+    font-family: "Raleway", sans-serif;
+    margin: 0px; /*remove margin on the end bc standard has marginc*/
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /*layout of the page is not columns; 1fr takes up end to end of the page*/
+}
+
+/* Nav styles */
+.nav-wrapper {
+    display: flex; /* flex-style: makes the text not on top of each other but rather left or right of each other */
+    justify-content: space-between; /* makes the text go on the sides */
+    padding: 38px; /* adds pixels to the padding */
+}
+
+.left-side {
+    display: flex; 
+}
+
+.nav-wrapper > .left-side > div{ /*go to navwrapper, go to left side, grab div*/
+    margin-right: 20px;
+    font-size: 0.9em;  
+    text-transform: uppercase; /*converts text to whatever case you want*/
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s; /*animates the bottom for .5 sec*/
+}
+
+.nav-link-wrapper a { /*just grabbing a link in nav link wrapper*/
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover { /*checks for when hover occurs*/
+    border-bottom: 1px solid black;
+}
+
+
+.nav-link-wrapper a:hover {  /*so that Home and About will be black when hovered over*/
+    color: black;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a{
+    color: black !important; /* need to ovverride reg color behavior */
+}
+
+/* Portfolio styles */
+
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*makes it so that it makes three columns*/
+}
+
+.portfolio-item-wrapper {
+    position: relative; /*makes it easier to move items around*/
+}
+
+.portfolio-img-background {
+    height: 350px;
+    width: 100%;
+    background-size: cover; /*crop so that images sit nicely next to each other*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;  /*forces this element to be somehwere where it usually wouldn't go*/
+    top: 0;
+    display: flex;    /*for text*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+/* Needs to be more specific with selector */
+
+.img-text-wrapper .subtitle { /* to make it so that the subtitile is transparent at the beginning */
+    transition: 1s;
+    font-weight: 600;   /* to make the transition smoother between transparent and not */
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: plum;
+}
+
+.img-darken {
+    transition: 1s; /* we know we want to animate it so we add a transition */
+    filter: brightness(10%);
+}
+
+/* About page */
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+    width: 90%;
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+    color: plum;
+}

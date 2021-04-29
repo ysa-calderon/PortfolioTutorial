@@ -1,0 +1,19 @@
+TODOs
+
+1. Build project
+    - create folder
+    - add files
+    - connect files
+
+2. Navbar
+    - 2 links and a name
+
+3. Porfolio item grid
+    - images
+    - titles
+    - descriptions
+    - animations
+    - javascript
+
+4. About page
+    - 
